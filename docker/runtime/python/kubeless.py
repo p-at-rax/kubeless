@@ -54,7 +54,8 @@ def handler():
         'event-time': req.get_header('event-time'),
         'event-namespace': req.get_header('event-namespace'),
         'extensions': {
-            'request': req
+            'request': req,
+            'response': bottle.response          
         }
     }
     method = req.method
